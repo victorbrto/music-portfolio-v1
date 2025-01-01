@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion } from "motion/react";
+import SocialLinks from "./Components/SocialLinks";
 
 const Contact = () => {
-    return (
-        <div className="h-screen w-full bg-cover bg-center bg-[url('/images/bg.jpg')]">
-            <div className="flex items-center justify-center h-screen">
-                <div className="font-merriweather flex flex-col space-y-4 text-sm">
-                    <h1 className="text-right uppercase text-white text-shadow">Remixes/Production/Soundtracks/Anything audio-related:</h1>
-                    <p className="text-justify text-white text-shadow">tito@arpejo.com</p>
-                    <h2 className="text-center text-red-600">SoundCloud</h2>
-                    <h3>YouTube</h3>
-                    <p className="text-justify text-white text-shadow text-xs">©Arpejo, Inc. | 2024</p>
-                </div>
+    useEffect(() => {
+        document.title = "Contact | Arpejo";
+    }, []);
 
+    return (
+        <div className="min-h-screen w-full bg-cover bg-center">
+            <div className="flex items-center justify-center min-h-screen">
+                <motion.div
+                    className="font-merriweather flex flex-col space-y-1 text-white text-shadow text-left"
+                    initial={{ opacity: 0, filter: "blur(9px)" }}
+                    animate={{ opacity: 1, filter: "blur(0px)" }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h1 className="text-xs italic uppercase">Remixes / Production / Soundtracks / Anything audio-related:</h1>
+                    <a
+                        href="mailto:tito@arpejo.com"
+                        className="text-2xl underline underline-offset-1">tito@arpejo.com
+                    </a>
+                    <SocialLinks />
+                </motion.div>
             </div>
         </div>
-
     );
-
-}
+};
 
 export default Contact;
