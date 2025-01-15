@@ -11,8 +11,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function App() {
 
   return (
-    <Router>
-      <div className="min-h-screen bg-cover bg-center font-merriweather text-red-950 flex flex-col items-center space-y-4" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
+    <Router basename='/music-portfolio-v1'>
+      <div className="min-h-screen bg-cover bg-center font-merriweather text-red-950 flex flex-col items-center space-y-4" style={{ backgroundImage: "url('/music-portfolio-v1/images/bg.jpg')" }}>
         <nav className="fixed top-1 left-2 w-full z-10 p-4">
           <Link to="/">Home </Link>
           <Link to="/about">About </Link>
