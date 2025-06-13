@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="min-h-screen w-full bg-cover bg-center">
             <div className="flex items-center justify-center min-h-screen">
                 <motion.div
-                    className="font-merriweather flex flex-col space-y-1 text-white text-shadow text-left"
+                    className="font-merriweather flex flex-col space-y-1 text-white text-shadow text-center sm:text-left px-8 sm:px-0"
                     initial={{ opacity: 0, filter: "blur(9px)" }}
                     animate={{ opacity: 1, filter: "blur(0px)" }}
                     transition={{ duration: 0.8 }}

@@ -8,7 +8,7 @@ const VideoEmbed = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen w-full">
+        <div className="flex items-center justify-center min-h-screen px-4">
             {!showVideo ? (
                 <button
                     onClick={handleClick}
@@ -17,9 +17,9 @@ const VideoEmbed = () => {
                     My name is Tito Apiari
                 </button>
             ) : (
-                <div className="w-full max-w-lg">
+                <div className="w-full h-auto max-w-lg aspect-[3/2]">
                     <iframe
-                        width="560" height="315"
+                        className="w-full h-full rounded-md"
                         src="https://www.youtube.com/embed/vV-lujhGYcg?si=3NNo2cqv0EM6d8M_"
                         title="YouTube video player"
                         frameborder="0"
